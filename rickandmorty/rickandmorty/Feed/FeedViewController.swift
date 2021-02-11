@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     
     private func handleResponse(success: Bool) {
         if success {
-            tableView.endUpdates()
+            tableView.reloadData()
         } else {
             // alarm future
             print("no success")
@@ -66,14 +66,12 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         (tableView.dequeueReusableCell(withIdentifier: "character", for: indexPath) as! CharacterCell)
-            .configure(character: viewModel.characters[indexPath.row], completion: { [weak self] _ in
-                self?.tableView.setNeedsLayout()
-            })
+            .configure(character: viewModel.characters[indexPath.row])
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        500
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        300
+    }
 }
 
 
@@ -94,5 +92,9 @@ extension ViewController: FeedViewProtocol {
     
     func turnNext(on: Bool) {
         nextButton.isEnabled = on
+    }
+    
+    func showAlert(with message: String) {
+        popupAlert(title: "Warning", message: message)
     }
 }

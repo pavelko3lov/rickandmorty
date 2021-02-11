@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		287CC10225D541AA004AF66F /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287CC10125D541AA004AF66F /* UIViewController+Alerts.swift */; };
 		28D2E13425D52CEC0089BC5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D2E13325D52CEC0089BC5D /* AppDelegate.swift */; };
 		28D2E13625D52CEC0089BC5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D2E13525D52CEC0089BC5D /* SceneDelegate.swift */; };
 		28D2E13825D52CEC0089BC5D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D2E13725D52CEC0089BC5D /* FeedViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		287CC10125D541AA004AF66F /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		28D2E13025D52CEC0089BC5D /* rickandmorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rickandmorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28D2E13325D52CEC0089BC5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28D2E13525D52CEC0089BC5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				28D2E17F25D5304E0089BC5D /* URLSession+Extensions.swift */,
+				287CC10125D541AA004AF66F /* UIViewController+Alerts.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				28D2E13825D52CEC0089BC5D /* FeedViewController.swift in Sources */,
 				28D2E13425D52CEC0089BC5D /* AppDelegate.swift in Sources */,
 				28D2E18025D5304E0089BC5D /* URLSession+Extensions.swift in Sources */,
+				287CC10225D541AA004AF66F /* UIViewController+Alerts.swift in Sources */,
 				28D2E18525D530B10089BC5D /* CharacterCell.swift in Sources */,
 				28D2E17025D52E540089BC5D /* FeedModel.swift in Sources */,
 				28D2E16B25D52E390089BC5D /* FeedViewModel.swift in Sources */,

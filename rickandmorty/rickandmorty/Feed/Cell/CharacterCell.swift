@@ -11,7 +11,7 @@ class CharacterCell: UITableViewCell {
     
     @IBOutlet weak var characterImage: UIImageView!
     
-    func configure(character: Character, completion: @escaping BoolCompletion) -> Self {
+    func configure(character: Character) -> Self {
         //    MARK: - TODO
         let url = URL(string: character.image)!
         let task = URLSession.shared.dataTask(with: url, completionHandler: { (data: Data?, response, error) in
@@ -27,7 +27,6 @@ class CharacterCell: UITableViewCell {
             
             DispatchQueue.main.async {
                 self.characterImage.image = UIImage(data: data)
-                completion(true)
             }
         })
         task.resume()

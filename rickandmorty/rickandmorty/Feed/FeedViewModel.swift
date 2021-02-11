@@ -15,6 +15,8 @@ protocol FeedViewProtocol: class {
     
     func turnPrev(on: Bool)
     func turnNext(on: Bool)
+    
+    func showAlert(with message: String)
 }
 
 class FeedViewModel {
@@ -65,15 +67,18 @@ class FeedViewModel {
                 debugPrint(error)
                 DispatchQueue.main.async {
                     self.view?.hideLoader()
+                    self.view?.showAlert(with: error.localizedDescription)
                     completion(false)
                 }
                 return
             }
 
             guard let feed = feed else {
-                debugPrint(NSError(domain: "not found", code: -1, userInfo: nil))
+                let error = NSError(domain: "not found", code: -1, userInfo: nil)
+                debugPrint(error)
                 DispatchQueue.main.async {
                     self.view?.hideLoader()
+                    self.view?.showAlert(with: error.localizedDescription)
                     completion(false)
                 }
                 return
