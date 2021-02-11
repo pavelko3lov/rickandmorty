@@ -9,18 +9,24 @@ import XCTest
 @testable import rickandmorty
 
 class rickandmortyTests: XCTestCase {
+    
+    var feedViewModel: FeedViewModel!
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        feedViewModel = FeedViewModel(view: nil)
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testGettingFeed() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        feedViewModel.getFeed(by: 1) { success in
+            XCTAssert(success == true, "cannot fulfill request")
+        }
     }
 
     func testPerformanceExample() throws {
