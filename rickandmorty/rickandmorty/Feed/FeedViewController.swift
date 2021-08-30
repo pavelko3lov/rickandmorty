@@ -18,7 +18,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = UITableView.automaticDimension
+        tableView.rowHeight = 300
         tableView.estimatedRowHeight = UITableView.automaticDimension
         
         viewModel = FeedViewModel(view: self)
@@ -69,9 +69,6 @@ extension ViewController: UITableViewDataSource {
             .configure(character: viewModel.characters[indexPath.row])
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        300
-    }
 }
 
 
