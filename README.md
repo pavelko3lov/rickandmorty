@@ -1,4 +1,7 @@
 # rickandmorty
+
+
+
 1.  The project solves the problem with: MVVM Architecture.
 
 2.  Link to the project: https://github.com/fvonk/rickandmorty
